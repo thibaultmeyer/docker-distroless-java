@@ -1,0 +1,6 @@
+FROM debian:bullseye as install
+
+
+COPY create_rootfs.sh /tmp/
+
+RUN bash /tmp/create_rootfs.sh
