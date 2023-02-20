@@ -1,6 +1,9 @@
-FROM debian:bullseye as install
+FROM debian:bullseye as rootfsbuilder
 
+ARG JDK_URL
 
-COPY create_rootfs.sh /tmp/
+# Copies rootfsbuilder files
+COPY rootfsbuilder /rootfsbuilder/
 
-RUN bash /tmp/create_rootfs.sh
+# Builds rootfs
+RUN bash /rootfsbuilder/build_rootfs.sh $JDK_URL

@@ -1,0 +1,12 @@
+# Temporary files
+*~
+.\#*
+
+
+# Root FS
+rootfs.tar.gz
+
+
+# Other
+.DS_Store
+Thumbs.db
